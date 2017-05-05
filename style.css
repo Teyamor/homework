@@ -1,0 +1,64 @@
+body { padding-top:50px; }
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #565553;
+    font-family: Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+button.btn.btn-primary {
+    background-color: #82ad58;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+button.btn.btn-primary:hover, button.btn.btn-primary:active {
+    background-color: #619e25;
+}
+
+table.table.table-bordered.table-striped.table-responsive a {
+    color: #81ad42;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+td.summ {
+    text-align: right;
+    font-size: 16px;
+}
+
+td.itog {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: 0;
+    height: 38px;
+    padding: 10px 16px;
+  	margin: 10px 0;
+	width: 30%;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin: 5px;
+    font-weight: 400;
+}
+
+button.btn.btn-default {
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+span.err {
+  color: red;
+}

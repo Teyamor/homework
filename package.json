@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-resource": "^1.5.x",
+    "angular-route": "v1.5.x",
+    "angular-sanitize": "^1.6.4",
+    "angular-strap": "^2.3.12",
+    "bootstrap": "3.2.0",
+    "bower": "^1.7.7",
+    "jquery": "^2.2.x",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
