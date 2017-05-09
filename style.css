@@ -25,6 +25,18 @@ table.table.table-bordered.table-striped.table-responsive a {
     font-size: 16px;
 }
 
+table.table.table-bordered.table-striped.table-responsive td:nth-child(1) {
+    width:20%;
+}
+
+table.table.table-bordered.table-striped.table-responsive td:nth-child(2) {
+    width:15%;
+}
+
+table.table.table-bordered.table-striped.table-responsive td:nth-child(3) {
+    width:40%;
+}
+
 td.summ {
     text-align: right;
     font-size: 16px;
@@ -40,7 +52,7 @@ td.itog {
     height: 38px;
     padding: 10px 16px;
   	margin: 10px 0;
-	width: 30%;
+	width: 100%;
 }
 
 label {

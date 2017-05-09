@@ -1,7 +1,6 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" role="button" class="close" aria-label="Close" ng-click="$hide()"><span aria-hidden="true">&times;</span></button>
               <h1 class="modal-title">Новая продажа</h1>
             </div>
             <div class="modal-body">
@@ -14,13 +13,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" ng-click="add()">Добавить</button>
-              <button type="button" class="btn btn-default" ng-click="#/" aria-label="Close">Закрыть</button>
+              <a href="#/"><button type="button" class="btn btn-default" aria-label="Close">Закрыть</button></a>
             </div>
           </div>
         </div>
-            <div ng-repeat="tabako in products | orderBy:sortType:sortReverse | filter:selectedProduct">
-              <p>{{ tabako.date | date:'dd/MM/yy'}}</p>
-              <p>{{ $index + 1}}</p>
-              <p>{{ tabako.name }}</p>
-              <p>{{ tabako.price }}</p>
-            </div>

@@ -72,6 +72,7 @@ angular.module('app', ['ngAnimate', 'ngSanitize', 'mgcrea.ngStrap', 'ngRoute'])
       $scope.addname = '';
       $scope.name = {};
       $scope.selectedDate= '';
+      return redirect("/");
     }
 
      $scope.selectedDate= '';
