@@ -2,10 +2,10 @@ angular.module('app', ['ngAnimate', 'ngSanitize', 'mgcrea.ngStrap', 'ngRoute'])
 
 .run(function($rootScope) {
     $rootScope.products = [
-      { name: 'Nirvana Super Shisha - Berry Blast', date: '05/01/17', number: 1, price: 1290 },
-      { name: 'Starbuzz Exotic - Pirates Cave', date: '12/02/17', number: 2, price: 1020 },
-      { name: 'Argelini - Red Fruit', date: '04/03/17', number: 4, price: 1050 },
-      { name: 'Starbuzz Exotic - Blue Mist', date: '30/03/17', number: 3, price: 1150 }
+      { name: 'Nirvana Super Shisha - Berry Blast', date: '05/01/17', price: 1250 },
+      { name: 'Starbuzz Exotic - Pirates Cave', date: '12/02/17', price: 1020 },
+      { name: 'Argelini - Red Fruit', date: '04/03/17', price: 1050 },
+      { name: 'Starbuzz Exotic - Blue Mist', date: '30/03/17', price: 1150 }
     ];
 })
 
