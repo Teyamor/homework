@@ -1,0 +1,36 @@
+    <section>
+      <div class="container">
+        <h1>Продажи</h1>
+        <div class="dropdown-menu datepicker" ng-class="'datepicker-mode-' + $mode" style="max-width: 320px;" aria-hidden="true"></div>
+        <table class="table table-bordered table-striped table-responsive" ng-repeat="tabako in products | orderBy:sortType:sortReverse | filter:selectedProduct">
+          <thead>
+            <tr>
+              <td>
+                  Дата продажи
+              </td>
+              <td>
+                  Номер продажи
+              </td>
+              <td>
+                  Нозвание товара
+              </td>
+              <td>
+                  Цена
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ tabako.date | date:'dd/MM/yy'}}</td>
+              <td>{{ $index + 1}}</td>
+              <td>{{ tabako.name }}</td>
+              <td>{{ tabako.price }}</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="summ">Сумма продаж:</td>
+              <td class="itog">{{ products | sumPrice: 'price' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>

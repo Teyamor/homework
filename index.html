@@ -15,76 +15,12 @@
     <script src="node_modules/angular-strap/dist/angular-strap.js" data-semver="v2.3.8"></script>
     <script src="node_modules/angular-strap/dist/angular-strap.tpl.js" data-semver="v2.3.8"></script>
     <script src="node_modules/underscore/underscore-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
     <script src="main_controller.js"></script>
     <!-- <script src="modal_controller.js"></script> -->
   </head>
-  <body>
-    <section>
-      <div class="container" ng-app="app" ng-controller="mainController">
-        <h1>Продажи</h1>
-        <div class="dropdown-menu datepicker" ng-class="'datepicker-mode-' + $mode" style="max-width: 320px;" aria-hidden="true"></div>
-        <table class="table table-bordered table-striped table-responsive">
-          <thead>
-            <tr>
-              <td>
-                <a href="#" ng-click="sortType = 'date'; sortReverse = !sortReverse">
-                  Дата продажи
-                  <span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
-                  <span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-              </td>
-              <td>
-                <a href="#" ng-click="sortType = 'number'; sortReverse = !sortReverse">
-                  Номер продажи
-                  <span ng-show="sortType == 'number' && !sortReverse" class="fa fa-caret-down"></span>
-                  <span ng-show="sortType == 'number' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-              </td>
-              <td>
-                <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
-                  Нозвание товара
-                  <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
-                  <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-              </td>
-              <td>
-                <a href="#" ng-click="sortType = 'price'; sortReverse = !sortReverse">
-                  Цена
-                  <span ng-show="sortType == 'price' && !sortReverse" class="fa fa-caret-down"></span>
-                  <span ng-show="sortType == 'price' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-              </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="tabako in products | orderBy:sortType:sortReverse | filter:selectedProduct">
-              <td>{{ tabako.date | date:'dd/MM/yy'}}</td>
-              <td>{{ $index + 1}}</td>
-              <td>{{ tabako.name }}</td>
-              <td>{{ tabako.price }}</td>
-            </tr>
-            <tr>
-              <td colspan="3" class="summ">Сумма продаж:</td>
-              <td class="itog">{{ products | sumPrice: 'price' }}</td>
-            </tr>
-          </tbody>
-        </table>
-		<h3>Завести новую продажу</h3>
-		<form name="myForm">
-			<label class="control-label">Название товара</small></label>
-			<input type=text class="form-control" name="myName" required ng-minlength="3" ng-model="addname" bs-options="tabako for tabako in names" placeholder="Nirvana" bs-typeahead ng-change="change()">
-			<span class="err" ng-show="myForm.myName.$touched && myForm.myName.$invalid">Введите название</br></span>
-			<label class="control-label">Цена</small></label>
-			<input type=text class="form-control" name="myPrice" required ng-minlength="2" ng-model="name.price" placeholder="1000">
-			<span class="err" ng-show="myForm.myPrice.$touched && myForm.myPrice.$invalid">Введите цену!</br></span>
-			<div class="form-group" ng-class="{'has-error': datepickerForm.date.$invalid}">
-			<label class="control-label"><i class="fa fa-calendar"></i> Дата продажи</small></label>
-			<input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker data-date-format="dd/MM/yy">
-			</div>
-		</form>
-        <button type="button" class="btn btn-primary" ng-click="add()">Добавить</button>
-
-      </div>
-    </section>
+  <body ng-app="app">
+         <a href="#/">Первая страница</a> <a href="#modal">Вторая страница</a>
+    <div ng-view></div>
   </body>
 </html>

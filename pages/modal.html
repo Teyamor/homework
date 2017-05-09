@@ -1,0 +1,26 @@
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" role="button" class="close" aria-label="Close" ng-click="$hide()"><span aria-hidden="true">&times;</span></button>
+              <h1 class="modal-title">Новая продажа</h1>
+            </div>
+            <div class="modal-body">
+              <input type=text class="form-control" ng-model="addname" bs-options="tabako for tabako in names" placeholder="Nirvana" bs-typeahead ng-change="change()">
+              <input type=text class="form-control" ng-model="name.price" placeholder="1000">
+              <div class="form-group" ng-class="{'has-error': datepickerForm.date.$invalid}">
+                <label class="control-label"><i class="fa fa-calendar"></i> Дата продажи</small></label>
+                <input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker data-date-format="dd/MM/yy">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" ng-click="add()">Добавить</button>
+              <button type="button" class="btn btn-default" ng-click="#/" aria-label="Close">Закрыть</button>
+            </div>
+          </div>
+        </div>
+            <div ng-repeat="tabako in products | orderBy:sortType:sortReverse | filter:selectedProduct">
+              <p>{{ tabako.date | date:'dd/MM/yy'}}</p>
+              <p>{{ $index + 1}}</p>
+              <p>{{ tabako.name }}</p>
+              <p>{{ tabako.price }}</p>
+            </div>
